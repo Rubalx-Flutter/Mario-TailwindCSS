@@ -1,8 +1,14 @@
+const { backgroundAttachment, backgroundImage } = require("@tailwindcss/jit/src/corePlugins");
+
 module.exports = {
     purge: [ './public/**/*.html',   ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: { }
+        extend: {
+            backgroundImage: theme => ({
+                'wave-pattern': 'url(../img/wave-white.png)'
+            })
+         }
     },
     variants: {
         extend: {},
